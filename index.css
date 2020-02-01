@@ -1,0 +1,108 @@
+html {
+    --cP: #c7141a;
+    --c1: #d45e62;
+    --cB: beige;
+    --cW: #fff;
+    --cG: #888;
+    --f: Verdana;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cB);
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 10px;
+}
+
+textarea {
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+#result {
+    background-color: var(--cW);
+    border: 1px solid var(--cG);
+    min-height: 100px;
+    margin-top: 20px;
+    min-height: 300px;
+}
+
+#visualisation {
+    margin: 11px 10px 0 0;
+    padding: 10px 10px 8px 10px;
+    border: 1px solid var(--cG);
+}
+.description {
+    width: 200px;
+    margin-bottom: 6px;
+    font-family: var(--f);
+    color: var(--cP);
+    text-align: center;
+    font-size: 18px;
+}
+
+canvas {
+}
+
+.center {
+    margin: 0 auto;
+}
+
+/* BUTTON */
+
+@keyframes sheen {
+    0% {
+        transform: skewX(-45deg) translateX(0);
+    }
+    39.9999% {
+        transform: skewX(-45deg) translateX(20em);
+    }
+    40% {
+        transform: skewX(-45deg) translateX(0);
+    }
+}
+
+.button {
+    padding: 0.3em 2em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 27px;
+    display: inline-block;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    color: var(--cB);
+    background-color: var(--cP);
+    border: 3px solid var(--c1);
+    width: 300px;
+    font-family: var(--f);
+    border-radius: 10px;
+}
+
+.button:before {
+    content: "";
+    background-color: #ffffff00;
+    background-image: linear-gradient(to right, #ffffff00, #ffffff10, #ffffff20, #ffffff00);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-45deg) translateX(0);
+    animation-name: sheen;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
